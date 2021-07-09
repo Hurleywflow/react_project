@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import { BookContext } from '../contexts/BookContext';
 
 const NewBookForm = () => {
-	const { addBook } = useContext(BookContext);
+	const { dispatch } = useContext(BookContext);
 	// useContext let us use all of content insiders BookContext we have created, this is addBook
 	const [title, setTitle] = useState('');
 	const [author, setAuthor] = useState('');
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		addBook(title, author);
+		dispatch({ type: 'ADD_BOOK', book: { title, author } });
+		// dispatch take action ADD_BOOK and payload method we want it to do
 		setTitle('');
 		setAuthor('');
 	};
