@@ -4,6 +4,7 @@ import BookDetails from './BookDetails';
 
 const BookList = () => {
 	const { books } = useContext(BookContext);
+	// useContext let us use all of content insiders BookContext we have created, this is books
 	return books.length ? (
 		<div className="book-list">
 			<ul>

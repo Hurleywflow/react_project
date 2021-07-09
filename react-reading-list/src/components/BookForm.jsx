@@ -3,9 +3,9 @@ import { BookContext } from '../contexts/BookContext';
 
 const NewBookForm = () => {
 	const { addBook } = useContext(BookContext);
+	// useContext let us use all of content insiders BookContext we have created, this is addBook
 	const [title, setTitle] = useState('');
 	const [author, setAuthor] = useState('');
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addBook(title, author);

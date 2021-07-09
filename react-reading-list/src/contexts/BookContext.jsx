@@ -4,6 +4,7 @@ import React, { createContext, useState } from 'react';
 import { v1 as uuid } from 'uuid';
 
 export const BookContext = createContext();
+// createContext let us create all content we needing.
 
 const BookContextProvider = (props) => {
 	const [books, setBooks] = useState([
@@ -21,6 +22,7 @@ const BookContextProvider = (props) => {
 		<BookContext.Provider value={{ books, addBook, removeBook }}>
 			{props.children}
 		</BookContext.Provider>
+		// use Provider to connect content to the App.
 	);
 };
 
