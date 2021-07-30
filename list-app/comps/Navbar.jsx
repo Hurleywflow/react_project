@@ -1,13 +1,23 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => (
 	<nav>
 		<div className="logo">
-			<h1>Hurley lists</h1>
+			{/* use Image from next/image instead of img standard for dynamic images */}
+			<Image src="/logo.svg" width={128} height={77} />
 		</div>
-		<a>Home</a>
-		<a>About</a>
-		<a>Hurley listing</a>
+		<Link href="/">
+			{/* use Link from next/link instead of a link and change href to Link */}
+			<a>Home</a>
+		</Link>
+		<Link href="/about">
+			<a>About</a>
+		</Link>
+		<Link href="/list">
+			<a>Hurley listing</a>
+		</Link>
 	</nav>
 );
 
