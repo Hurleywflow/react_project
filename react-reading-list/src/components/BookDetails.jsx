@@ -15,7 +15,7 @@ const BookDetails = ({ book }) => {
 				type="button"
 				onClick={() => {
 					dispatch({ type: 'DELETE_BOOK', id: book.id });
-          // dispatch take action DELETE_BOOK and payload method we want it to do
+					// dispatch take action DELETE_BOOK and payload method we want it to do
 				}}
 			>
 				Delete
