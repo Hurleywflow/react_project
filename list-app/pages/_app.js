@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Layout from '../comps/Layout';
 import '../styles/globals.css';
 
